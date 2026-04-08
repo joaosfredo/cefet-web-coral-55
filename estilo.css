@@ -3,12 +3,14 @@
 @import url("./fonts/ravie.css");
 @import url("./fonts/verdana.css");
 
-html, body {
+html,
+body,
+#recipiente {
   min-height: 100vh;
 }
 
 body {
-  margin: 0; 
+  margin: 0;
   font-family: "Verdana", "VerdanaCustom", sans-serif;
   background-color: #fff;
 }
@@ -25,7 +27,6 @@ strong {
   background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
   border-left: 1px solid #d3d3d3;
   border-right: 1px solid #d3d3d3;
-  min-height: 100vh;
 }
 
 #cardapio {
@@ -33,6 +34,7 @@ strong {
   border-top: 1px solid #aac0ae;
   border-bottom: 1px solid #aac0ae;
   border-left: 1px solid #aac0ae;
+  padding: 0 20px;
 }
 
 #cardapio h3 {
@@ -50,18 +52,16 @@ strong {
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
-  width: 900px;              /* largura fixa */
-  margin: 0 auto;            /* centraliza */
+  width: 900px;
+  margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns: 220px 1fr; /* lateral + conteúdo */
-  grid-template-rows: auto 1fr auto; /* topo, conteúdo, rodapé */
-
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "cabecalho cabecalho"
-    "lateral   cardapio"
-    "rodape    rodape";
+    "lateral cardapio"
+    "rodape rodape";
 }
 
 #cabecalho-pagina {
@@ -84,7 +84,7 @@ strong {
 
 /* EXERCÍCIO 3: cabeçalho da página */
 #cabecalho-pagina {
-
+  padding: 10px 10px 0 10px;
 }
 
 #cabecalho-pagina h1 {
@@ -92,6 +92,7 @@ strong {
   font-size: 36px;
   color: #e90c0c;
   font-weight: normal;
+  text-align: center;
 }
 
 #cabecalho-pagina h2 {
@@ -99,19 +100,36 @@ strong {
   font-size: 24px;
   color: #333;
   font-weight: normal;
+  text-align: right;
 }
 
 /* EXERCÍCIO 4: cada item do menu */
 article {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
 }
 
 
 /* EXERCÍCIO 5: o rodapé */
 #rodape-pagina {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 46px 15px 25px 0;
+  box-sizing: border-box;
 }
 
 /* EXERCÍCIO 6: lateral */
 #lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lateral img {
+  display: block;
 }
 
 
