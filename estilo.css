@@ -3,7 +3,12 @@
 @import url("./fonts/ravie.css");
 @import url("./fonts/verdana.css");
 
+html, body {
+  min-height: 100vh;
+}
+
 body {
+  margin: 0; 
   font-family: "Verdana", "VerdanaCustom", sans-serif;
   background-color: #fff;
 }
@@ -20,6 +25,7 @@ strong {
   background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
   border-left: 1px solid #d3d3d3;
   border-right: 1px solid #d3d3d3;
+  min-height: 100vh;
 }
 
 #cardapio {
@@ -44,26 +50,34 @@ strong {
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
   /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  width: 900px;              /* largura fixa */
+  margin: 0 auto;            /* centraliza */
+
+  display: grid;
+
+  grid-template-columns: 220px 1fr; /* lateral + conteúdo */
+  grid-template-rows: auto 1fr auto; /* topo, conteúdo, rodapé */
+
+  grid-template-areas:
+    "cabecalho cabecalho"
+    "lateral   cardapio"
+    "rodape    rodape";
 }
 
 #cabecalho-pagina {
-
+  grid-area: cabecalho;
 }
 
 #lateral {
-
+  grid-area: lateral;
 }
 
 #cardapio {
-
+  grid-area: cardapio;
 }
 
 #rodape-pagina {
-
+  grid-area: rodape;
 }
 
 
