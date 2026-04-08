@@ -1,9 +1,15 @@
 /* EXERCÍCIO 1: fontes */
 /* importá-las aqui... e definir as `font-family` da turminha... */
-
+@import url("./fonts/ravie.css");
+@import url("./fonts/verdana.css");
 
 body {
+  font-family: "Verdana", "VerdanaCustom", sans-serif;
   background-color: #fff;
+}
+
+h1 {
+  font-family: "Ravie", cursive;
 }
 
 strong {
@@ -119,4 +125,3 @@ article {
    as custom properties */
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
-
