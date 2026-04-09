@@ -149,9 +149,14 @@ article {
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
 #siri {
+  position: relative;
+  top: -47px;
+  left: -40px;
 }
 
 #peixe {
+  position: relative;
+  left: -74px;
 }
 
 /* EXERCÍCIO 9: bolhas - no HTML e no JS */
